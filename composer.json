@@ -1,9 +1,16 @@
 {
     "name": "hexlet/code",
+    "bin": [
+        "bin/gendiff"
+      ],
     "autoload": {
         "psr-4": {
             "Hexlet\\Code\\": "src/"
-        }
+        },
+        "files": [
+            "src/Cli.php",
+            "vendor/docopt/docopt/src/docopt.php"
+        ]
     },
     "authors": [
         {
@@ -11,5 +18,7 @@
             "email": "kolalexx@yandex.ru"
         }
     ],
-    "require": {}
+    "require": {
+        "docopt/docopt": "^1.0"
+    }
 }
