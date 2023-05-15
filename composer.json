@@ -9,6 +9,7 @@
         },
         "files": [
             "src/Cli.php",
+            "src/Comparison.php",
             "vendor/docopt/docopt/src/docopt.php"
         ]
     },
