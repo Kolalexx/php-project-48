@@ -7,4 +7,4 @@ Compare 2 files
 
 For two plain json files in stylish format
 
-https://asciinema.org/a/4Nel3wY236to2bKilGmnrA3gS
+[![asciicast](https://asciinema.org/a/4Nel3wY236to2bKilGmnrA3gS.svg)](https://asciinema.org/a/4Nel3wY236to2bKilGmnrA3gS)
