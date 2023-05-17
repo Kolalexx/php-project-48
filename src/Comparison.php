@@ -10,7 +10,7 @@ function readFileIntoString($pathToFile)
 function makeStringFromValue($value)
 {
     if (is_bool($value)) {
-        return ($value === false) ? "false" : "true"; 
+        return ($value === false) ? "false" : "true";
     } else {
         return $value;
     }
