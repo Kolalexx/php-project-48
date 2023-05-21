@@ -18,6 +18,9 @@ function makeStringFromValue($value)
 
 function decodStringIntoArray($stringJson)
 {
+    if (empty($stringJson)) {
+        return [];
+    }
     $arrayJson = json_decode($stringJson, true);
     return array_reduce(array_keys($arrayJson), function ($acc, $key) use ($arrayJson) {
         $value = $arrayJson[$key];
