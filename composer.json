@@ -10,7 +10,8 @@
         "files": [
             "src/Cli.php",
             "src/Comparison.php",
-            "vendor/docopt/docopt/src/docopt.php"
+            "vendor/docopt/docopt/src/docopt.php",
+            "src/Parsers.php"
         ]
     },
     "authors": [
@@ -20,7 +21,8 @@
         }
     ],
     "require": {
-        "docopt/docopt": "^1.0"
+        "docopt/docopt": "^1.0",
+        "symfony/yaml": "^6.2"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "*",
