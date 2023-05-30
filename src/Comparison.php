@@ -2,7 +2,7 @@
 
 namespace Differ\Comparison;
 
-use function Differ\Parsers\parseToArray; 
+use function Differ\Parsers\parseToArray;
 
 function gendiff($pathToFile1, $pathToFile2, $format)
 {
