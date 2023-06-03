@@ -57,6 +57,16 @@ class ComparisonTest extends TestCase
         gendiff($file1, $file6, 'stylish');
     }
 
+    public function testGendiffJson6(): void
+    {
+        $file7 = 'tests/fixtures/file7.json';
+        $file8 = 'tests/fixtures/file8.json';
+
+        $result6 = file_get_contents('tests/fixtures/result6.json', true);
+        $this->expectOutputString($result6);
+        gendiff($file7, $file8, 'stylish');
+    }
+
     public function testGendiffYaml1(): void
     {
         $file1 = 'tests/fixtures/file1.yaml';
@@ -105,5 +115,15 @@ class ComparisonTest extends TestCase
         $result5 = file_get_contents('tests/fixtures/result5.json', true);
         $this->expectOutputString($result5);
         gendiff($file1, $file6, 'stylish');
+    }
+
+    public function testGendiffYaml6(): void
+    {
+        $file7 = 'tests/fixtures/file7.yaml';
+        $file8 = 'tests/fixtures/file8.yaml';
+
+        $result6 = file_get_contents('tests/fixtures/result6.json', true);
+        $this->expectOutputString($result6);
+        gendiff($file7, $file8, 'stylish');
     }
 }
