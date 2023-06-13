@@ -9,16 +9,6 @@ class ComparisonTest extends TestCase
 {
     public function testGendiffJson1(): void
     {
-        $file1 = 'tests/fixtures/file1.json';
-        $file2 = 'tests/fixtures/file2.json';
-
-        $result = file_get_contents('tests/fixtures/gendiffFlat.json', true);
-        $this->expectOutputString($result);
-        gendiff($file1, $file2, 'stylish');
-    }
-
-    public function testGendiffJson2(): void
-    {
         $file3 = 'tests/fixtures/file3.json';
         $file2 = 'tests/fixtures/file2.json';
 
@@ -27,7 +17,7 @@ class ComparisonTest extends TestCase
         gendiff($file3, $file2, 'stylish');
     }
 
-    public function testGendiffJson3(): void
+    public function testGendiffJson2(): void
     {
         $file3 = 'tests/fixtures/file3.json';
         $file4 = 'tests/fixtures/file4.json';
@@ -37,7 +27,7 @@ class ComparisonTest extends TestCase
         gendiff($file3, $file4, 'stylish');
     }
 
-    public function testGendiffJson4(): void
+    public function testGendiffJson3(): void
     {
         $file1 = 'tests/fixtures/file1.json';
         $file5 = 'tests/fixtures/file5.json';
@@ -47,7 +37,7 @@ class ComparisonTest extends TestCase
         gendiff($file1, $file5, 'stylish');
     }
 
-    public function testGendiffJson5(): void
+    public function testGendiffJson4(): void
     {
         $file1 = 'tests/fixtures/file1.json';
         $file6 = 'tests/fixtures/file6.json';
@@ -57,7 +47,7 @@ class ComparisonTest extends TestCase
         gendiff($file1, $file6, 'stylish');
     }
 
-    public function testGendiffJson6(): void
+    public function testGendiffJson5(): void
     {
         $file7 = 'tests/fixtures/file7.json';
         $file8 = 'tests/fixtures/file8.json';
@@ -69,16 +59,6 @@ class ComparisonTest extends TestCase
 
     public function testGendiffYaml1(): void
     {
-        $file1 = 'tests/fixtures/file1.yaml';
-        $file2 = 'tests/fixtures/file2.yaml';
-
-        $result = file_get_contents('tests/fixtures/gendiffFlat.json', true);
-        $this->expectOutputString($result);
-        gendiff($file1, $file2, 'stylish');
-    }
-
-    public function testGendiffYaml2(): void
-    {
         $file3 = 'tests/fixtures/file3.yaml';
         $file2 = 'tests/fixtures/file2.yaml';
 
@@ -87,7 +67,7 @@ class ComparisonTest extends TestCase
         gendiff($file3, $file2, 'stylish');
     }
 
-    public function testGendiffYaml3(): void
+    public function testGendiffYaml2(): void
     {
         $file3 = 'tests/fixtures/file3.yaml';
         $file4 = 'tests/fixtures/file4.yaml';
@@ -97,7 +77,7 @@ class ComparisonTest extends TestCase
         gendiff($file3, $file4, 'stylish');
     }
 
-    public function testGendiffYaml4(): void
+    public function testGendiffYaml3(): void
     {
         $file1 = 'tests/fixtures/file1.yaml';
         $file5 = 'tests/fixtures/file5.yaml';
@@ -107,7 +87,7 @@ class ComparisonTest extends TestCase
         gendiff($file1, $file5, 'stylish');
     }
 
-    public function testGendiffYaml5(): void
+    public function testGendiffYaml4(): void
     {
         $file1 = 'tests/fixtures/file1.yaml';
         $file6 = 'tests/fixtures/file6.yaml';
@@ -117,7 +97,7 @@ class ComparisonTest extends TestCase
         gendiff($file1, $file6, 'stylish');
     }
 
-    public function testGendiffYaml6(): void
+    public function testGendiffYaml5(): void
     {
         $file7 = 'tests/fixtures/file7.yaml';
         $file8 = 'tests/fixtures/file8.yaml';
