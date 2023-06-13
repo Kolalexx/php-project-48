@@ -6,5 +6,7 @@ use function Differ\Formats\Stylish\formatedDiffInStylish;
 
 function formatedDiff($diff, $format = 'stylish')
 {
-    return formatedDiffInStylish($diff);
+    if ($format === 'stylish') {
+        return formatedDiffInStylish($diff);
+    }
 }

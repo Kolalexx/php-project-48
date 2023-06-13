@@ -4,7 +4,6 @@ namespace Differ\Comparison;
 
 use function Differ\Parsers\parseToArray;
 use function Differ\Formatters\formatedDiff;
-
 use function Functional\sort;
 
 function makeLeaf($key, $type, $value1, $value2 = null): array
@@ -60,8 +59,8 @@ function makeTree(array $array1, array $array2): array
         } elseif (!is_array($value1) || !is_array($value2)) {
             return makeLeaf($key, 'changed', $value1, $value2);
         } else {
-        $result = makeTree($value1, $value2);
-        return makeNode($key, 'node', $result);
+            $result = makeTree($value1, $value2);
+            return makeNode($key, 'node', $result);
         }
     }, $sortedKeys);
 }
