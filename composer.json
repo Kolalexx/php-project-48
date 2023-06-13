@@ -11,7 +11,9 @@
             "src/Cli.php",
             "src/Comparison.php",
             "vendor/docopt/docopt/src/docopt.php",
-            "src/Parsers.php"
+            "src/Parsers.php",
+            "src/Formatters.php",
+            "src/Formats/Stylish.php"
         ]
     },
     "authors": [
@@ -22,7 +24,8 @@
     ],
     "require": {
         "docopt/docopt": "^1.0",
-        "symfony/yaml": "^6.2"
+        "symfony/yaml": "^6.2",
+        "lstrojny/functional-php": "^1.17"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "*",
