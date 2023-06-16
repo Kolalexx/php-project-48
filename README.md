@@ -19,3 +19,7 @@ For two flat yaml files in stylish format
 For two nested json files in stylish format
 
 [![asciicast](https://asciinema.org/a/2uImnzTPITN9NxYzMGW16saoh.svg)](https://asciinema.org/a/2uImnzTPITN9NxYzMGW16saoh)
+
+For two nested json files in plain format
+
+[![asciicast](https://asciinema.org/a/OEVkJtlPkzYhrhr5rQmmS35yG.svg)](https://asciinema.org/a/OEVkJtlPkzYhrhr5rQmmS35yG)
