@@ -76,5 +76,5 @@ function gendiff($pathToFile1, $pathToFile2, $format)
     $fileArray1 = parseToArray($pathToFile1);
     $fileArray2 = parseToArray($pathToFile2);
     $diff = getDiff($fileArray1, $fileArray2);
-    print formatedDiff($diff);
+    print formatedDiff($diff, $format);
 }

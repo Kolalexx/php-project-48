@@ -13,7 +13,8 @@
             "vendor/docopt/docopt/src/docopt.php",
             "src/Parsers.php",
             "src/Formatters.php",
-            "src/Formatters/Stylish.php"
+            "src/Formatters/Stylish.php",
+            "src/Formatters/Plain.php"
         ]
     },
     "authors": [

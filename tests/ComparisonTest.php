@@ -104,6 +104,6 @@ class ComparisonTest extends TestCase
 
         $result5 = file_get_contents('tests/fixtures/gendiffPlain.json', true);
         $this->expectOutputString($result5);
-        gendiff($file6, $file7, 'stylish');
+        gendiff($file6, $file7, 'plain');
     }
 }

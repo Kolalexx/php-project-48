@@ -1,6 +1,6 @@
 <?php
 
-namespace Differ\Formats\Stylish;
+namespace Differ\Formatter\Stylish;
 
 use function Differ\Comparison\getChildren;
 use function Differ\Comparison\getKey;
