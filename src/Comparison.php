@@ -1,6 +1,6 @@
 <?php
 
-namespace Differ\Comparison;
+namespace Differ\Differ;
 
 use function Differ\Parsers\parseToArray;
 use function Differ\Formatters\formatedDiff;

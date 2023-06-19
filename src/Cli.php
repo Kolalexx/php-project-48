@@ -4,7 +4,7 @@ namespace Differ\Cli;
 
 use Docopt;
 
-use function Differ\Comparison\gendiff;
+use function Differ\Differ\gendiff;
 
 function run()
 {
