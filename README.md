@@ -4,22 +4,41 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/ad0f0e9d7f2e961eb1e2/maintainability)](https://codeclimate.com/github/Kolalexx/php-project-48/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/ad0f0e9d7f2e961eb1e2/test_coverage)](https://codeclimate.com/github/Kolalexx/php-project-48/test_coverage)
 
+## Difference Calculator
+Difference Calculator is a command line tool for finding differences in configuration files (JSON, YAML). It generates reports in the form of plain text, tree and json.
+
+### Usage
+  gendiff (-h|--help)
+  
+  gendiff (-v|--version)
+  
+  gendiff [--format <fmt>] <firstFile> <secondFile>
+  
+### Report formats:
+<ul>
+<li>plain
+<li>stylish
+<li>json
+</ul>
+
+### Requirements
+
+PHP: >= 7.4
+
+Composer: ^2.3
+
+GNU make: ^4.2
+
+### Setup
+
+```sh
+$ git clone git@github.com:Kolalexx/php-project-48.git
+
+$ cd php-project-48
+
+$ make install
+```
+
 ### Example:
 
-Compare 2 files
-
-For two flat json files in stylish format
-
-[![asciicast](https://asciinema.org/a/4Nel3wY236to2bKilGmnrA3gS.svg)](https://asciinema.org/a/4Nel3wY236to2bKilGmnrA3gS)
-
-For two flat yaml files in stylish format
-
-[![asciicast](https://asciinema.org/a/ZxPLTbVsfC7C5bgcpRuCz2NpP.svg)](https://asciinema.org/a/ZxPLTbVsfC7C5bgcpRuCz2NpP)
-
-For two nested json files in stylish format
-
-[![asciicast](https://asciinema.org/a/2uImnzTPITN9NxYzMGW16saoh.svg)](https://asciinema.org/a/2uImnzTPITN9NxYzMGW16saoh)
-
-For two nested json files in plain format
-
-[![asciicast](https://asciinema.org/a/OEVkJtlPkzYhrhr5rQmmS35yG.svg)](https://asciinema.org/a/OEVkJtlPkzYhrhr5rQmmS35yG)
+[![asciicast](https://asciinema.org/a/7HZyQl2zgEvwoikpp4yJsekqH.svg)](https://asciinema.org/a/7HZyQl2zgEvwoikpp4yJsekqH)
