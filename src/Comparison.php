@@ -71,7 +71,7 @@ function getDiff(array $array1, array $array2): array
     return ['type' => 'tree', 'children' => $children];
 }
 
-function gendiff($pathToFile1, $pathToFile2, $format)
+function gendiff($pathToFile1, $pathToFile2, $format = 'stylish')
 {
     $fileArray1 = parseToArray($pathToFile1);
     $fileArray2 = parseToArray($pathToFile2);
