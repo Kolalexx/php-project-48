@@ -23,7 +23,7 @@ Difference Calculator is a command line tool for finding differences in configur
 
 ### Requirements
 
-PHP: >= 8.2
+PHP: >= 8.0
 
 Composer: ^2.4
 
