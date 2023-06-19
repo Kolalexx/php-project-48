@@ -23,11 +23,9 @@ Difference Calculator is a command line tool for finding differences in configur
 
 ### Requirements
 
-PHP: >= 7.4
+PHP: >= 8.2
 
-Composer: ^2.3
-
-GNU make: ^4.2
+Composer: ^2.4
 
 ### Setup
 
@@ -41,4 +39,4 @@ $ make install
 
 ### Example:
 
-[![asciicast](https://asciinema.org/a/7HZyQl2zgEvwoikpp4yJsekqH.svg)](https://asciinema.org/a/7HZyQl2zgEvwoikpp4yJsekqH)
+[![asciicast](https://asciinema.org/a/D5IuDfYAxtecvyrCODnFmgtNm.svg)](https://asciinema.org/a/D5IuDfYAxtecvyrCODnFmgtNm)

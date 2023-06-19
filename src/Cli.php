@@ -11,17 +11,14 @@ function run()
     $doc = <<<DOC
     gendiff -h
 
-    Generate diff
+    Usage: gendiff [options] <firstFile> <secondFile>
 
-    Usage:
-        gendiff (-h|--help)
-        gendiff (-v|--version)
-        gendiff [--format <fmt>] <firstFile> <secondFile>
+    Compares two configuration files and shows a difference.
 
     Options:
-        -h --help                     Show this screen
-        -v --version                  Show version
-        --format <fmt>                Report format [default: stylish]
+        -h, --help                     display help for command
+        -v, --version                  output the version number
+        -f, --format [type]            output format [default: "stylish"]
     DOC;
 
     $args = Docopt::handle($doc, array('version' => '1.0'));
