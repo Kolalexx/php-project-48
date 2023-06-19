@@ -10,6 +10,7 @@
         "files": [
             "src/Cli.php",
             "src/Comparison.php",
+            "scr/Differ.php",
             "vendor/docopt/docopt/src/docopt.php",
             "src/Parsers.php",
             "src/Formatters.php",
