@@ -27,5 +27,5 @@ function run()
     $arg2 = $args['<secondFile>'];
     $format = $args['--format'];
 
-    gendiff($arg1, $arg2, $format);
+    return gendiff($arg1, $arg2, $format);
 }

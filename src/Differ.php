@@ -19,5 +19,5 @@ function gendiff($path1, $path2, $format = 'stylish')
     $fileArray1 = parseToArray($absolutePath1);
     $fileArray2 = parseToArray($absolutePath2);
     $diff = getDiff($fileArray1, $fileArray2);
-    print formatedDiff($diff, $format);
+    return formatedDiff($diff, $format);
 }

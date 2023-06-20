@@ -13,4 +13,4 @@ if (file_exists($autoloadPath1)) {
 
 use function Differ\Cli\run;
 
-echo(run());
+print run();
