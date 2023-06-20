@@ -16,7 +16,7 @@ Compares two configuration files and shows a difference.
 Options:
     -h, --help                     display help for command
     -v, --version                  output the version number
-    -f, --format [type]            output format [default: "stylish"]
+    -f, --format [type]            output format [default: stylish]
 EOF;
 
 function run()
