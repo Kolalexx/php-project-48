@@ -6,10 +6,18 @@ use function Differ\Parsers\parseToArray;
 use function Differ\Comparison\getDiff;
 use function Differ\Formatters\formatedDiff;
 
-function gendiff($pathToFile1, $pathToFile2, $format = 'stylish')
+function getAbsolutePath($path)
 {
-    $fileArray1 = parseToArray($pathToFile1);
-    $fileArray2 = parseToArray($pathToFile2);
+    $pathToFile = ($path[0] === '/' ? '' : __DIR__ . "/../") . $path;
+    return $path;
+}
+
+function gendiff($path1, $path2, $format = 'stylish')
+{
+    $absolutePath1 = getAbsolutePath($path1);
+    $absolutePath2 = getAbsolutePath($path2);
+    $fileArray1 = parseToArray($absolutePath1);
+    $fileArray2 = parseToArray($absolutePath2);
     $diff = getDiff($fileArray1, $fileArray2);
     print formatedDiff($diff, $format);
 }
