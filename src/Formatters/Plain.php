@@ -19,7 +19,7 @@ function toString($item): string
     }
 }
 
-function makeFormated($currentValue, $curretPath, $acc): array
+function makeFormated(array $currentValue, string $curretPath, array $acc): array
 {
     $type  = getType($currentValue);
     if ($type === 'tree') {
@@ -45,7 +45,7 @@ function makeFormated($currentValue, $curretPath, $acc): array
     return $acc;
 }
 
-function formatedDiffInPlain($diff): string
+function formatedDiffInPlain(array $diff): string
 {
     $lines = makeFormated($diff, '', []);
     return implode("\n", $lines);

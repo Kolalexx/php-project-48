@@ -6,13 +6,13 @@ use function Differ\Parsers\parseToArray;
 use function Differ\Comparison\getDiff;
 use function Differ\Formatters\formatedDiff;
 
-function getAbsolutePath($path)
+function getAbsolutePath(string $path)
 {
     $pathToFile = ($path[0] === '/' ? '' : __DIR__ . "/../") . $path;
     return $path;
 }
 
-function gendiff($path1, $path2, $format = 'stylish')
+function gendiff(string $path1, string $path2, string $format = 'stylish')
 {
     $absolutePath1 = getAbsolutePath($path1);
     $absolutePath2 = getAbsolutePath($path2);

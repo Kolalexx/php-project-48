@@ -8,7 +8,7 @@ use function Differ\Comparison\getType;
 use function Differ\Comparison\getValue1;
 use function Differ\Comparison\getValue2;
 
-function toString($item, $depth): string
+function toString($item, int $depth): string
 {
     if (!is_array($item)) {
         return is_null($item) ? "null" : trim(var_export($item, true), "'");
@@ -21,17 +21,17 @@ function toString($item, $depth): string
     return convertedToString($lines, $curretIndent);
 }
 
-function convertedToString($lines, $curretIndent)
+function convertedToString(array $lines, string $curretIndent)
 {
     return "{\n" . implode("\n", $lines) . "\n" . $curretIndent . "}";
 }
 
-function getIndent($depth): string
+function getIndent(int $depth): string
 {
     return str_repeat('    ', $depth - 1);
 }
 
-function makeFormated($currentValue, $depth): string
+function makeFormated(array $currentValue, int $depth): string
 {
     $curretIndent = getIndent($depth);
     $lines = array_reduce($currentValue, function ($acc, $item) use ($curretIndent, $depth) {
@@ -56,7 +56,7 @@ function makeFormated($currentValue, $depth): string
     return convertedToString($lines, $curretIndent);
 }
 
-function formatedDiffInStylish($diff)
+function formatedDiffInStylish(array $diff)
 {
     return makeFormated(getChildren($diff), 1);
 }

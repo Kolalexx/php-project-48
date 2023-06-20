@@ -4,37 +4,37 @@ namespace Differ\Comparison;
 
 use function Functional\sort;
 
-function makeLeaf($key, $type, $value1, $value2 = null): array
+function makeLeaf(string $key, string $type, $value1, $value2 = null): array
 {
     return ['key' => $key, 'type' => $type, 'value1' => $value1, 'value2' => $value2];
 }
 
-function makeNode($key, $type, $children): array
+function makeNode(string $key, string $type, array $children): array
 {
     return ['key' => $key, 'type' => $type, 'children' => $children];
 }
 
-function getKey($diff)
+function getKey(array $diff)
 {
     return $diff['key'];
 }
 
-function getType($diff)
+function getType(array $diff)
 {
     return $diff['type'];
 }
 
-function getChildren($diff)
+function getChildren(array $diff)
 {
     return $diff['children'];
 }
 
-function getValue1($diff)
+function getValue1(array $diff)
 {
     return $diff['value1'];
 }
 
-function getValue2($diff)
+function getValue2(array $diff)
 {
     return $diff['value2'];
 }
