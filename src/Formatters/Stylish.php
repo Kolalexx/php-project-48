@@ -8,7 +8,7 @@ use function Differ\Comparison\getType;
 use function Differ\Comparison\getValue1;
 use function Differ\Comparison\getValue2;
 
-function toString($item, int $depth): string
+function toString(mixed $item, int $depth): string
 {
     if (!is_array($item)) {
         return is_null($item) ? "null" : trim(var_export($item, true), "'");

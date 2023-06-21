@@ -8,7 +8,7 @@ use function Differ\Comparison\getType;
 use function Differ\Comparison\getValue1;
 use function Differ\Comparison\getValue2;
 
-function toString($item): string
+function toString(mixed $item): string
 {
     if (is_array($item)) {
         return "[complex value]";
