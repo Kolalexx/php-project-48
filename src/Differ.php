@@ -11,7 +11,7 @@ function getAbsolutePath(string $path)
     $pathToFile = ($path[0] === '/' ? '' : __DIR__ . "/../") . $path;
     $realPath = realpath($pathToFile);
     if ($realPath === false) {
-        throw new Exception("Invalid path to file: '{$path}'");
+        throw new \Exception("Invalid path to file: '{$path}'");
     }
     return $realPath;
 }
