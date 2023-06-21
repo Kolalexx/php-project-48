@@ -11,7 +11,7 @@ function parseToArray(string $pathToFile)
         return [];
     }
     if ($str === false) {
-        throw new \Exception("Cannot parse the file");;
+        throw new \Exception("Cannot parse the file");
     }
     if (pathinfo($pathToFile, PATHINFO_EXTENSION) === 'json') {
         $array = json_decode($str, true);
