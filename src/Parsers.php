@@ -12,8 +12,12 @@ function parseToArray(string $pathToFile)
     }
     if (pathinfo($pathToFile, PATHINFO_EXTENSION) === 'json') {
         $array = json_decode($str, true);
-    } else {
+    } elseif (pathinfo($pathToFile, PATHINFO_EXTENSION) === 'yaml') {
         $array = Yaml::parse($str);
+    } elseif (pathinfo($pathToFile, PATHINFO_EXTENSION) === 'yml') {
+        $array = Yaml::parse($str);
+    } else {
+        throw new \Exception("Unknown extension");
     }
     return $array;
 }
