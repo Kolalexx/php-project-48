@@ -9,7 +9,11 @@ use function Differ\Formatters\formatedDiff;
 function getAbsolutePath(string $path)
 {
     $pathToFile = ($path[0] === '/' ? '' : __DIR__ . "/../") . $path;
-    return $path;
+    $realPath = realpath($pathToFile);
+    if ($realPath === false) {
+        throw new Exception("Invalid path to file: '{$path}'");
+    }
+    return $realPath;
 }
 
 function gendiff(string $path1, string $path2, string $format = 'stylish')
