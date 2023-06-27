@@ -4,7 +4,7 @@ namespace Differ\Differ;
 
 use function Differ\Parsers\parseToArray;
 use function Differ\Comparison\getDiff;
-use function Differ\Formatters\formatedDiff;
+use function Differ\Formatters\formatDiff;
 
 function getAbsolutePath(string $path)
 {
@@ -22,5 +22,5 @@ function genDiff(string $path1, string $path2, string $format = 'stylish')
     $fileArray1 = parseToArray($absolutePath1);
     $fileArray2 = parseToArray($absolutePath2);
     $diff = getDiff($fileArray1, $fileArray2);
-    return formatedDiff($diff, $format);
+    return formatDiff($diff, $format);
 }

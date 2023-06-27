@@ -56,7 +56,7 @@ function makeFormated(array $currentValue, int $depth): string
     return convertedToString($lines, $curretIndent);
 }
 
-function formatedDiffInStylish(array $diff)
+function formatDiffInStylish(array $diff)
 {
     return makeFormated(getChildren($diff), 1);
 }

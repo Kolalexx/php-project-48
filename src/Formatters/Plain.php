@@ -45,7 +45,7 @@ function makeFormated(array $currentValue, string $curretPath, array $acc): arra
     return $acc;
 }
 
-function formatedDiffInPlain(array $diff): string
+function formatDiffInPlain(array $diff): string
 {
     $lines = makeFormated($diff, '', []);
     return implode("\n", $lines);

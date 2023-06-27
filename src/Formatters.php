@@ -2,17 +2,18 @@
 
 namespace Differ\Formatters;
 
-use function Differ\Formatter\Stylish\formatedDiffInStylish;
-use function Differ\Formatter\Plain\formatedDiffInPlain;
-use function Differ\Formatter\Json\formatedDiffInJson;
+use function Differ\Formatter\Stylish\formatDiffInStylish;
+use function Differ\Formatter\Plain\formatDiffInPlain;
+use function Differ\Formatter\Json\formatDiffInJson;
 
-function formatedDiff(array $diff, string $format)
+function formatDiff(array $diff, string $format)
 {
-    if ($format === 'stylish') {
-        return formatedDiffInStylish($diff);
-    } elseif ($format === 'plain') {
-        return formatedDiffInPlain($diff);
-    } elseif ($format === 'json') {
-        return formatedDiffInJson($diff);
+    switch ($format) {
+        case 'stylish':
+            return formatDiffInStylish($diff);
+        case 'plain':
+            return formatDiffInPlain($diff);
+        case 'json':
+            return formatDiffInJson($diff);
     }
 }
