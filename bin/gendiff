@@ -11,8 +11,6 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use Docopt;
-
 use function Differ\Differ\gendiff;
 
 const DOC = <<<EOF

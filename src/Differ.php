@@ -8,8 +8,7 @@ use function Differ\Formatters\formatedDiff;
 
 function getAbsolutePath(string $path)
 {
-    $pathToFile = ($path[0] === '/' ? '' : __DIR__ . "/../") . $path;
-    $realPath = realpath($pathToFile);
+    $realPath = realpath($path);
     if ($realPath === false) {
         throw new \Exception("Invalid path to file: '{$path}'");
     }
