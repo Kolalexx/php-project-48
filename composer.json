@@ -8,7 +8,6 @@
             "Hexlet\\Code\\": "src/"
         },
         "files": [
-            "src/Cli.php",
             "src/Comparison.php",
             "src/Differ.php",
             "vendor/docopt/docopt/src/docopt.php",
