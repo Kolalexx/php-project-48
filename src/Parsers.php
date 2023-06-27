@@ -8,13 +8,12 @@ function parseToArray(string $fileToString, string $extension)
 {
     switch ($extension) {
         case 'json':
-            $array = json_decode($fileToString, true);
+            return $array = json_decode($fileToString, true);
         case 'yaml':
-            $array = Yaml::parse($fileToString);
+            return $array = Yaml::parse($fileToString);
         case 'yml':
-            $array = Yaml::parse($fileToString);
+            return $array = Yaml::parse($fileToString);
         default:
             throw new \Exception("Unknown extension: '{$extension}'");
     }
-    return $array;
 }
