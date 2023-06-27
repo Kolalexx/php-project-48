@@ -15,7 +15,7 @@ function getAbsolutePath(string $path)
     return $realPath;
 }
 
-function gendiff(string $path1, string $path2, string $format = 'stylish')
+function genDiff(string $path1, string $path2, string $format = 'stylish')
 {
     $absolutePath1 = getAbsolutePath($path1);
     $absolutePath2 = getAbsolutePath($path2);
