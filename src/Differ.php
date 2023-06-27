@@ -18,9 +18,6 @@ function getAbsolutePath(string $path)
 function readFile(string $pathToFile)
 {
     $str = file_get_contents($pathToFile);
-    if ($str === '') {
-        return [];
-    }
     if ($str === false) {
         throw new \Exception("Cannot parse the file");
     }
@@ -31,8 +28,12 @@ function getContentAndParse(string $pathToFile)
 {
     $absolutePath = getAbsolutePath($pathToFile);
     $fileToString = readFile($absolutePath);
-    $extension = pathinfo($absolutePath, PATHINFO_EXTENSION);
-    $fileToArray = parseToArray($fileToString, $extension);
+    if ($fileToString === '') {
+        $fileToArray = [];
+    } else {
+        $extension = pathinfo($absolutePath, PATHINFO_EXTENSION);
+        $fileToArray = parseToArray($fileToString, $extension);
+    }
     return $fileToArray;
 }
 
