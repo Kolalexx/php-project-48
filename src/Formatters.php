@@ -15,5 +15,7 @@ function formatDiff(array $diff, string $format)
             return formatDiffInPlain($diff);
         case 'json':
             return formatDiffInJson($diff);
+        default:
+            throw new \Exception("Unknown format: '{$format}'");
     }
 }
