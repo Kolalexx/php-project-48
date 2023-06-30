@@ -50,16 +50,18 @@ function makeTree(mixed $array1, mixed $array2): array
         $value2 = $array2[$key] ?? null;
         if (!array_key_exists($key, $array1)) {
             return makeLeaf($key, 'added', $value2);
-        } elseif (!array_key_exists($key, $array2)) {
-            return makeLeaf($key, 'deleted', $value1);
-        } elseif ($value1 === $value2) {
-            return makeLeaf($key, 'unchanged', $value1);
-        } elseif (!is_array($value1) || !is_array($value2)) {
-            return makeLeaf($key, 'changed', $value1, $value2);
-        } else {
-            $result = makeTree($value1, $value2);
-            return makeNode($key, 'node', $result);
         }
+        if (!array_key_exists($key, $array2)) {
+            return makeLeaf($key, 'deleted', $value1);
+        }
+        if ($value1 === $value2) {
+            return makeLeaf($key, 'unchanged', $value1);
+        }
+        if (!is_array($value1) || !is_array($value2)) {
+            return makeLeaf($key, 'changed', $value1, $value2);
+        }
+        $result = makeTree($value1, $value2);
+        return makeNode($key, 'node', $result);
     }, $sortedKeys);
 }
 

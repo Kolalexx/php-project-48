@@ -12,16 +12,16 @@ function toString(mixed $item): string
 {
     if (is_array($item)) {
         return "[complex value]";
-    } elseif (is_null($item)) {
-        return "null";
-    } else {
-        return var_export($item, true);
     }
+    if (is_null($item)) {
+        return "null";
+    }
+    return var_export($item, true);
 }
 
 function makeFormated(array $currentValue, string $curretPath, array $acc): array
 {
-    $type  = getType($currentValue);
+    $type = getType($currentValue);
     if ($type === 'tree') {
         $children = getChildren($currentValue);
         return array_reduce($children, fn($newAcc, $child) => makeFormated($child, '', $newAcc), $acc);
@@ -37,9 +37,11 @@ function makeFormated(array $currentValue, string $curretPath, array $acc): arra
     $value2 = toString(getValue2($currentValue));
     if ($type === 'added') {
         return array_merge($acc, ["Property '$path' was added with value: {$value1}"]);
-    } elseif ($type === 'deleted') {
+    }
+    if ($type === 'deleted') {
         return array_merge($acc, ["Property '$path' was removed"]);
-    } elseif ($type === 'changed') {
+    }
+    if ($type === 'changed') {
         return array_merge($acc, ["Property '$path' was updated. From {$value1} to {$value2}"]);
     }
     return $acc;

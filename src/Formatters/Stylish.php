@@ -36,7 +36,7 @@ function makeFormated(array $currentValue, int $depth): string
     $curretIndent = getIndent($depth);
     $lines = array_reduce($currentValue, function ($acc, $item) use ($curretIndent, $depth) {
         $key = getKey($item);
-        $type  = getType($item);
+        $type = getType($item);
         if ($type === 'node') {
             $children = makeFormated(getChildren($item), $depth + 1);
             return [...$acc, "{$curretIndent}    {$key}: {$children}"];
@@ -45,13 +45,14 @@ function makeFormated(array $currentValue, int $depth): string
         $value2 = toString(getValue2($item), $depth + 1);
         if ($type === 'added') {
             return [...$acc, "{$curretIndent}  + {$key}: {$value1}"];
-        } elseif ($type === 'deleted') {
-            return [...$acc, "{$curretIndent}  - {$key}: {$value1}"];
-        } elseif ($type === 'changed') {
-            return [...$acc, "{$curretIndent}  - {$key}: {$value1}", "{$curretIndent}  + {$key}: {$value2}"];
-        } else {
-            return [...$acc, "{$curretIndent}    {$key}: {$value1}"];
         }
+        if ($type === 'deleted') {
+            return [...$acc, "{$curretIndent}  - {$key}: {$value1}"];
+        }
+        if ($type === 'changed') {
+            return [...$acc, "{$curretIndent}  - {$key}: {$value1}", "{$curretIndent}  + {$key}: {$value2}"];
+        }
+        return [...$acc, "{$curretIndent}    {$key}: {$value1}"];
     }, []);
     return convertedToString($lines, $curretIndent);
 }
